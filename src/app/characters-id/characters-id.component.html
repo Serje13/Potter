@@ -1,0 +1,23 @@
+<!--<div *ngIf="character">
+  <h1>Student {{character.name}} info:</h1>
+  <div *ngFor="let key of keys(character)">
+    <span>{{key}}:</span><span>{{character[key]}}</span>
+  </div>
+  <button mat-stroked-button color="primary" (click)="goBack()">GoBack</button>
+</div>-->
+
+<mat-card *ngIf="character" class="student">
+  <mat-card-header>
+    <mat-card-title>
+      <h1>Student {{character.name}} info:</h1>
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <div *ngFor="let key of keys(character)">
+      <span>{{key}}:</span><span>{{character[key]}}</span>
+    </div>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-stroked-button color="primary" (click)="goBack()">GoBack</button>
+  </mat-card-actions>
+</mat-card>

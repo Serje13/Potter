@@ -1,0 +1,10 @@
+<h1>List of Houses</h1>
+<div *ngIf="houses">
+  <ol>
+    <li *ngFor="let house of houses">
+      <a routerLink="/characters/{{house.name}}">
+        <h3>{{house.name}}</h3>
+      </a>
+    </li>
+  </ol>
+</div>
